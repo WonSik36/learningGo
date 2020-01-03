@@ -5,6 +5,8 @@
 	https://yabmoons.tistory.com/23
 
 	Dynamic Programming
+	It's similar to knapsack problem
+	But algorithm is different
 */
 
 package main
