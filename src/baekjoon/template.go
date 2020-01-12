@@ -1,7 +1,7 @@
 /*
-   baekjoon online judge
-   problem number
-   https://www.acmicpc.net/problem/
+   	baekjoon online judge
+   	problem number
+   	https://www.acmicpc.net/problem/
 */
 
 package main
