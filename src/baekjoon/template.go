@@ -1,7 +1,7 @@
 /*
-   	baekjoon online judge
-   	problem number
-   	https://www.acmicpc.net/problem/
+	baekjoon online judge
+	problem number 
+	https://www.acmicpc.net/problem/
 */
 
 package main
@@ -40,6 +40,17 @@ func getStrTkn(r *bufio.Reader) []string {
 	strTkn := strings.Split(str, " ")
 
 	return strTkn
+}
+
+func getIntArr(r *bufio.Reader) []int {
+	strTkn := getStrTkn(r)
+	arr := make([]int, len(strTkn), len(strTkn))
+
+	for i := 0; i < len(arr); i++ {
+		arr[i], _ = strconv.Atoi(strTkn[i])
+	}
+
+	return arr
 }
 
 func printArr(arr []int, w *bufio.Writer) {
