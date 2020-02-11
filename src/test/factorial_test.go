@@ -1,5 +1,5 @@
 /*
-	recursion vs tail recursion
+	recursion vs tail recursion in factorial
 	https://blog.usejournal.com/tail-recursion-in-go-fb5cf69a0f26
 	https://aidanbae.github.io/code/golang/benchmark/
 	http://pyrasis.com/book/GoForTheReallyImpatient/Unit61/01
