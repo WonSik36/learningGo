@@ -7,7 +7,7 @@
 	high reference:
 	https://huiung.tistory.com/117
 
-	It doesn't need memoization
+	Need memoization to remove wrong way
 */
 
 package main
@@ -19,12 +19,19 @@ import (
 	"strings"
 )
 
+var memo []bool
+
 func main() {
 	r := bufio.NewReader(os.Stdin)
 	w := bufio.NewWriter(os.Stdout)
 
 	target := []byte(getString(r))
 	N := getInt(r)
+	memo = make([]bool,len(target)+1,len(target)+1)
+	for i:=0;i<len(memo);i++ {
+		memo[i] = true
+	}
+
 	var arr [][]byte
 	for i := 0; i < N; i++ {
 		arr = append(arr, []byte(getString(r)))
@@ -42,6 +49,10 @@ func main() {
 func dp(pos int, arr [][]byte, target []byte) bool {
 	if pos == len(target) {
 		return true
+	}
+
+	if !memo[pos] {
+		return false;
 	}
 
 	var res bool = false
@@ -64,6 +75,7 @@ func dp(pos int, arr [][]byte, target []byte) bool {
 		}
 	}
 
+	memo[pos] = res
 	return res
 }
 
