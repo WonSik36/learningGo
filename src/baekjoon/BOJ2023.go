@@ -3,6 +3,7 @@
 	problem number 2023
 	https://www.acmicpc.net/problem/2023
 
+	Prime Number Problem
 	BackTracking Problem
 */
 
@@ -71,7 +72,7 @@ func initPrimeArr(N int){
 
 	isPrime[1] = false
 
-	for i:=2;i<Max;i++ {
+	for i:=2;i*i<Max;i++ {
 		if isPrime[i] {
 			for j:=2*i;j<Max;j+=i {
 				isPrime[j] = false
