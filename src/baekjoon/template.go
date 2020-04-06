@@ -1,6 +1,6 @@
 /*
 	baekjoon online judge
-	problem number 
+	problem number
 	https://www.acmicpc.net/problem/
 */
 
@@ -8,6 +8,7 @@ package main
 
 import (
 	"bufio"
+	"fmt"
 	"os"
 	"strconv"
 	"strings"
@@ -55,6 +56,7 @@ func getIntArr(r *bufio.Reader) []int {
 
 func printArr(arr []int, w *bufio.Writer) {
 	for i := 0; i < len(arr); i++ {
-		w.WriteString(strconv.Itoa(arr[i]) + "\n")
+		fmt.Printf("%d ", arr[i])
 	}
+	fmt.Print("\n")
 }
